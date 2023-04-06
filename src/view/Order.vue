@@ -47,6 +47,7 @@
         <template #default="scope">
           <el-button size="small" @click="checkOrder(scope.$index, scope.row)">详情</el-button>
           <el-button v-if="scope.row.status === 3" size="small" type="primary" @click="modifyOrder(scope.row, 4)">配送</el-button>
+          <el-button v-if="scope.row.status === 4" size="small" type="primary" @click="modifyOrder(scope.row, 5)">确认收货</el-button>
           <el-popconfirm title="此操作将永久删除该信息, 是否继续?"
                          confirmButtonText="确认"
                          cancelButtonText="取消"
